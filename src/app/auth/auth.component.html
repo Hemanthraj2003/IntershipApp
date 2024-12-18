@@ -1,0 +1,27 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <div class="form-group">
+          <mat-label>Email</mat-label>
+          <input matInput id="email" [(ngModel)]="email" name="email" />
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            matInput
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+        </div>
+      </mat-form-field>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</div>

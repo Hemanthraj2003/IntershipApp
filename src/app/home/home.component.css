@@ -1,0 +1,29 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+#homeRoot {
+    height: 100vh;
+
+    padding: 20px;
+}
+
+#homeRoot H1{
+    color: cyan
+}
+
+.routeButton {
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    width: 70px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.routeButton:hover {
+    background-color: rgba(0, 255, 255, 0.616);
+    cursor: pointer;
+    color: white;
+}
