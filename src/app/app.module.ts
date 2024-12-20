@@ -19,6 +19,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CustomerComponent } from './customer/customer.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +33,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     AuthComponent,
     HomeComponent,
     DropdownComponent,
+    CustomerComponent,
       ],
   imports: [
     BrowserModule,
@@ -42,9 +47,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatDatepickerModule,
     MatIconModule  ,
-    MatNativeDateModule 
-
-  
+    MatNativeDateModule,
+    HttpClientModule, 
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

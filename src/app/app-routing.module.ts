@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { CollegeComponent } from './college/college.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { CustomerComponent } from './customer/customer.component';
 
 const routes: Routes = [
   {path: '', component: AuthComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'AboutMe', component: UserComponent},
+  {path: 'customer', component: CustomerComponent},
   {path: 'College', component: CollegeComponent},
   {path: 'Profile', component: ProfileComponent},
   {path: 'dropdown', component: DropdownComponent},

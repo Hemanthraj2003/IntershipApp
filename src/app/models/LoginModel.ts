@@ -1,4 +1,6 @@
 export class Login{
-    InvoiceNo ? : string;
-    InvoiceDate ? : Date;
+    UserId ? : string;
+    Password ? : string;
+    OTP ? : string;
 }
+
