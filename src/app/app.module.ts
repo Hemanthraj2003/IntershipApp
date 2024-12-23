@@ -22,7 +22,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CustomerComponent } from './customer/customer.component';
-
+// import { StoreComponent } from './store/store.component';
+import { StorereportComponent } from './storereport/storereport.component';
+import {MatCardModule} from '@angular/material/card';
+import { StoresComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { CustomerComponent } from './customer/customer.component';
     HomeComponent,
     DropdownComponent,
     CustomerComponent,
+    StoresComponent,
+    // StoreComponent,
+    StorereportComponent,
       ],
   imports: [
     BrowserModule,
@@ -49,7 +55,7 @@ import { CustomerComponent } from './customer/customer.component';
     MatIconModule  ,
     MatNativeDateModule,
     HttpClientModule, 
-    MatSnackBarModule
+    MatSnackBarModule,MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

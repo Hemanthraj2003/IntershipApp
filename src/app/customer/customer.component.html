@@ -53,3 +53,8 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
+<mat-form-field>
+  <mat-label>ID</mat-label>
+  <input matInput type="text" name="ID" [(ngModel)]="Id" />
+</mat-form-field>
+<button mat-flat-button (click)="deleteCustomer()">Delete</button>

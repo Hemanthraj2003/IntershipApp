@@ -8,6 +8,7 @@ import { CollegeComponent } from './college/college.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { CustomerComponent } from './customer/customer.component';
+import { StoresComponent } from './store/store.component';
 
 const routes: Routes = [
   {path: '', component: AuthComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'College', component: CollegeComponent},
   {path: 'Profile', component: ProfileComponent},
   {path: 'dropdown', component: DropdownComponent},
+  {path: 'store', component: StoresComponent},
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { customer } from '../models/customer';
 import { CustomerModel } from '../models/CustomerModel';
+import { Store } from '../models/Store';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,17 @@ export class CommonserviceService {
     return this.http.get(this.url + 'Logins/verify?'+param)
   }
   
+  getStore() {
+    console.log("Hello world");
+    return this.http.get(this.url+"Stores");
+  }
+
+  postStore(record: Store) : Observable<Store> {
+    console.log(record);
+    return this.http.post<Store>(this.url+"Stores",record);
+    
+  }
+
   //customer api call
   GetCustomers(){
     return this.http.get(this.url + 'Customers')

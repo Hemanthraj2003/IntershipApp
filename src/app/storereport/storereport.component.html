@@ -1,0 +1,87 @@
+<div>
+  <mat-card>
+    <mat-card-title>Stores Information</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="stores" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let store">{{ store.id }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <td mat-cell *matCellDef="let store">{{ store.date | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="itemCategory">
+          <th mat-header-cell *matHeaderCellDef>Item Category</th>
+          <td mat-cell *matCellDef="let store">{{ store.itemCategory }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="item">
+          <th mat-header-cell *matHeaderCellDef>Item</th>
+          <td mat-cell *matCellDef="let store">{{ store.item }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="batchNo">
+          <th mat-header-cell *matHeaderCellDef>Batch Number</th>
+          <td mat-cell *matCellDef="let store">{{ store.batchNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="uom">
+          <th mat-header-cell *matHeaderCellDef>UOM</th>
+          <td mat-cell *matCellDef="let store">{{ store.uom }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="quantity">
+          <th mat-header-cell *matHeaderCellDef>Quantity</th>
+          <td mat-cell *matCellDef="let store">{{ store.quantity }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="authorizedPerson">
+          <th mat-header-cell *matHeaderCellDef>Authorized Person</th>
+          <td mat-cell *matCellDef="let store">{{ store.authorizedPerson }}</td>
+        </ng-container>
+
+        <tr
+          mat-header-row
+          *matHeaderRowDef="[
+            'id',
+            'date',
+            'itemCategory',
+            'item',
+            'batchNo',
+            'uom',
+            'quantity',
+            'authorizedPerson'
+          ]"
+        ></tr>
+        <tr
+          mat-row
+          *matRowDef="
+            let row;
+            columns: [
+              'id',
+              'date',
+              'itemCategory',
+              'item',
+              'batchNo',
+              'uom',
+              'quantity',
+              'authorizedPerson'
+            ]
+          "
+        ></tr>
+      </table>
+      <br />
+      <br />
+
+      <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="id" [(ngModel)]="record.id" />
+      </mat-form-field>
+
+      <button mat-raised-button (click)="Delete()">Delete</button>
+    </mat-card-content>
+  </mat-card>
+</div>

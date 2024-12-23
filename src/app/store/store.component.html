@@ -1,0 +1,77 @@
+<mat-card>
+  <mat-card-title>Stores</mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>ItemCategory</mat-label>
+      <select matNativeControl [(ngModel)]="record.ItemCategory">
+        <option value="Laptop">Laptop</option>
+        <option value="Keyboard">Keyboard</option>
+        <option value="Speaker">Speaker</option>
+        <option value="Cpu">Cpu</option>
+      </select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Item</mat-label>
+      <input matInput placeholder="Enter Item" [(ngModel)]="record.Item" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>BatchNo</mat-label>
+      <input
+        matInput
+        placeholder="Enter BatchNo"
+        [(ngModel)]="record.BatchNo"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>UOM</mat-label>
+      <input matInput placeholder="Enter UOM" [(ngModel)]="record.UOM" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Quantity</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="Enter Quantity"
+        [(ngModel)]="record.Quantity"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Customer</mat-label>
+      <mat-select
+        name="customer"
+        class="textCtrl"
+        [(ngModel)]="record.CustomerNumber"
+      >
+        <mat-option *ngFor="let cus of dtCustomer" [value]="cus.code">{{
+          cus.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>AuthorizedPerson</mat-label>
+      <input
+        matInput
+        placeholder="Enter AuthorizedPerson"
+        [(ngModel)]="record.AuthorizedPerson"
+      />
+    </mat-form-field>
+
+    <button mat-raised-button (click)="submit()">Submit</button>
+    <br />
+  </mat-card-content>
+</mat-card>
