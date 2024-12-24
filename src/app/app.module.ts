@@ -26,6 +26,9 @@ import { CustomerComponent } from './customer/customer.component';
 import { StorereportComponent } from './storereport/storereport.component';
 import {MatCardModule} from '@angular/material/card';
 import { StoresComponent } from './store/store.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { StoresComponent } from './store/store.component';
     StoresComponent,
     // StoreComponent,
     StorereportComponent,
+    HeaderComponent,
+    FooterComponent,
+    GraphComponent,
       ],
   imports: [
     BrowserModule,
@@ -55,7 +61,7 @@ import { StoresComponent } from './store/store.component';
     MatIconModule  ,
     MatNativeDateModule,
     HttpClientModule, 
-    MatSnackBarModule,MatCardModule
+    MatSnackBarModule,MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
